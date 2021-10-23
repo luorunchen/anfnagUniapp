@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/component/news",
+    "pages/index/index",
+    "pages/component/me",
+    "pages/login/index",
+    "pages/component/devices",
+    "pages/component/Inspection"
+  ],
+  "subPackages": [
+    {
+      "root": "myPagesA",
+      "pages": [
+        "pages/allDevices",
+        "pages/management",
+        "pages/devicesInfo",
+        "pages/addDevices",
+        "pages/project",
+        "pages/addProject",
+        "pages/projectDetails",
+        "pages/devicesMap"
+      ]
+    },
+    {
+      "root": "myPagesB",
+      "pages": [
+        "pages/electricalDetails"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#DD514C",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "static/zhuye.png",
+        "selectedIconPath": "static/zhuye2.png"
+      },
+      {
+        "pagePath": "pages/component/news",
+        "text": "消息",
+        "iconPath": "static/xiaoxi1.png",
+        "selectedIconPath": "static/xiaoxi2.png"
+      },
+      {
+        "pagePath": "pages/component/devices",
+        "text": "设备",
+        "iconPath": "static/shebei.png",
+        "selectedIconPath": "static/shebei2.png"
+      },
+      {
+        "pagePath": "pages/component/me",
+        "text": "我的",
+        "iconPath": "static/wode.png",
+        "selectedIconPath": "static/wode2.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

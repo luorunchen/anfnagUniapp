@@ -1,0 +1,166 @@
+{
+
+	//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [{
+			"path": "pages/component/news",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "主页"
+			}
+		},
+
+		{
+			"path": "pages/component/me",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+
+
+		{
+			"path": "pages/component/devices",
+			"style": {
+				"navigationBarTitleText": "设备"
+			}
+		},
+
+		{
+			"path": "pages/component/Inspection",
+			"style": {
+				"navigationBarTitleText": "项目"
+			}
+		}
+
+
+
+
+	],
+	"subPackages": [{
+			"root": "myPagesA",
+			"pages": [{
+					"path": "pages/allDevices",
+					"style": {
+						"navigationBarTitleText": "所有设备"
+					}
+				},
+				{
+					"path": "pages/management",
+					"style": {
+						"navigationBarTitleText": "管理设备"
+					}
+				},
+				{
+					"path": "pages/devicesInfo",
+					"style": {
+						"navigationBarTitleText": "设备详情"
+					}
+				}, {
+					"path": "pages/addDevices",
+					"style": {
+						"navigationBarTitleText": "添加设备"
+					}
+				},
+				{
+					"path": "pages/project",
+					"style": {
+						"navigationBarTitleText": "项目管理"
+					}
+				},
+				{
+					"path": "pages/addProject",
+					"style": {
+						"navigationBarTitleText": "新增项目"
+					}
+				},
+				{
+					"path": "pages/projectDetails",
+					"style": {
+						"navigationBarTitleText": "项目详情"
+					}
+				}, {
+					"path": "pages/devicesMap",
+					"style": {
+						"navigationBarTitleText": "设备位置"
+					}
+				}
+
+			]
+		},
+		{
+			"root": "myPagesB",
+			"pages": [{
+				"path": "pages/electricalDetails",
+				"style": {
+					"navigationBarTitleText": "设备详情"
+				}
+			}]
+		}
+	],
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"tabBar": {
+		"color": "#8a8a8a",
+		"selectedColor": "#DD514C",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "主页",
+				"iconPath": "static/zhuye.png",
+				"selectedIconPath": "static/zhuye2.png"
+
+			},
+			{
+				"pagePath": "pages/component/news",
+				"text": "消息",
+				"iconPath": "static/xiaoxi1.png",
+				"selectedIconPath": "static/xiaoxi2.png"
+
+			},
+			{
+				"pagePath": "pages/component/devices",
+				"text": "设备",
+				"iconPath": "static/shebei.png",
+				"selectedIconPath": "static/shebei2.png"
+
+			},
+
+			// {
+			// 	"pagePath": "pages/component/Inspection",
+			// 	"text": "项目",
+			// 	"iconPath": "static/xunjian.png",
+			// 	"selectedIconPath": "static/xunjian2.png"
+
+			// },
+			{
+				"pagePath": "pages/component/me",
+				"text": "我的",
+				"iconPath": "static/wode.png",
+				"selectedIconPath": "static/wode2.png"
+
+			}
+
+
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+
+}
