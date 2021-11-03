@@ -7,7 +7,7 @@
 		<view class="user">
 			<u-form :model="form" ref="uForm" border-bottom>
 				<u-form-item label="姓名" prop="name"><u-input v-model="form.name" /></u-form-item>
-				<u-form-item label="密码" prop="intro"><u-input v-model="form.intro" /></u-form-item>
+				<u-form-item label="密码"  prop="intro"><u-input type='password' v-model="form.intro" /></u-form-item>
 			</u-form>
 		</view>
 		<u-button @click="submit" type="primary">登录</u-button>
@@ -70,6 +70,13 @@ export default {
 				// 			console.log(that._data,999)
 			}
 		});
+		
+		console.log(uni.getStorageSync('userName'),1111)
+		if(uni.getStorageSync('userName')!=""){
+			uni.reLaunch({
+				url:"/pages/index/index"
+			})
+		}
 	},
 	methods: {
 		submit() {

@@ -822,7 +822,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7323,7 +7323,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7344,14 +7344,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7437,7 +7437,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -12945,7 +12945,7 @@ module.exports = function isAxiosError(payload) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.service = void 0;var _axios = _interopRequireDefault(__webpack_require__(/*! axios */ 40));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 var service = _axios.default.create({
-  baseURL: 'http://edog-online.com/earlyWarn', // api的base_url
+  baseURL: 'https://psy119.cn/earlyWarn', // api的base_url
   timeout: 50000 // 请求超时时间
 });
 
@@ -13076,7 +13076,7 @@ _axios.default.defaults.adapter = function (config) {//自己定义个适配器�
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.check_device_type = check_device_type;exports.checkuser = checkuser;exports.APPlogin = APPlogin;exports.AppProjectList = AppProjectList;exports.getDeviceByPid = getDeviceByPid;exports.AppProject = AppProject;exports.getHistAlarm = getHistAlarm;exports.getDeviceByDevId = getDeviceByDevId;exports.regionList = regionList;exports.getLegalFireMan = getLegalFireMan;exports.addProject = addProject;exports.deleProject = deleProject;exports.addRegisterProject = addRegisterProject;exports.deleDevice = deleDevice;exports.addDevice = addDevice;exports.AppDeviceList = AppDeviceList;exports.check_alldevice = check_alldevice;exports.check_devicereportid = check_devicereportid;exports.ReadParameterApi = ReadParameterApi;var _request = __webpack_require__(/*! ../utils/request.js */ 71);
+Object.defineProperty(exports, "__esModule", { value: true });exports.check_device_type = check_device_type;exports.checkuser = checkuser;exports.APPlogin = APPlogin;exports.AppProjectList = AppProjectList;exports.getDeviceByPid = getDeviceByPid;exports.AppProject = AppProject;exports.getHistAlarm = getHistAlarm;exports.getDeviceByDevId = getDeviceByDevId;exports.regionList = regionList;exports.getLegalFireMan = getLegalFireMan;exports.addProject = addProject;exports.deleProject = deleProject;exports.addRegisterProject = addRegisterProject;exports.deleDevice = deleDevice;exports.addDevice = addDevice;exports.AppDeviceList = AppDeviceList;exports.check_alldevice = check_alldevice;exports.check_devicereportid = check_devicereportid;exports.ReadParameterApi = ReadParameterApi;exports.SetParameterApi = SetParameterApi;exports.addLegalFireMan = addLegalFireMan;exports.newcheck_devicetp = newcheck_devicetp;exports.putMessToDevice = putMessToDevice;exports.passwordSSS = passwordSSS;exports.WebeditFileimageServlet = WebeditFileimageServlet;exports.closeVoice = closeVoice;exports.setDepoly = setDepoly;var _request = __webpack_require__(/*! ../utils/request.js */ 71);
 
 
 
@@ -13340,32 +13340,121 @@ function ReadParameterApi(id, my_username) {
 
 }
 
+//阀值设置
+function SetParameterApi(devSignature, parNine, parTen, parEleven,
+parTwelve, parThirteen, parFourteen, parFifteen, parSixteen, parSeventeen, parEighteen, parNineteen) {
+  return (0, _request.service)({
+    url: "/SetParameterApi.action",
+    method: 'GET',
+    params: {
+      devSignature: devSignature,
+      parNine: parNine,
+      parTen: parTen,
+      parEleven: parEleven,
+      parTwelve: parTwelve,
+      parThirteen: parThirteen,
+      parFourteen: parFourteen,
+      parFifteen: parFifteen,
+      parSixteen: parSixteen,
+      parSeventeen: parSeventeen,
+      parEighteen: parEighteen,
+      parNineteen: parNineteen } });
+
+
+}
+
+
+//新增人员
+function addLegalFireMan(state, fname, username, fphone, tel, long_lat, long_latbai, ftelephone) {
+  return (0, _request.service)({
+    url: "/admin/project/check/addLegalFireMan.action",
+    method: 'GET',
+    params: {
+      state: state,
+      fname: fname,
+      username: username,
+      fphone: fphone,
+      tel: tel,
+      long_lat: long_lat,
+      long_latbai: long_latbai,
+      ftelephone: ftelephone } });
+
+
+}
+//所有设备
+function newcheck_devicetp(username, type, Number, pageNum, my_username, object) {
+  return (0, _request.service)({
+    url: "/RegionDevice/newcheck_devicetp.action",
+    method: 'GET',
+    params: {
+      username: username,
+      type: type,
+      Number: Number,
+      pageNum: pageNum,
+      my_username: my_username,
+      object: object } });
+
+
+}
+//所有设备
+function putMessToDevice(username, imei, content) {
+  return (0, _request.service)({
+    url: "/admin/project/putMessToDevice.action",
+    method: 'GET',
+    params: {
+      username: username,
+      imei: imei,
+      content: content } });
+
+
+}
+
+//修改密码
+function passwordSSS(passwordencrypt, password, user_name, my_username) {
+  return (0, _request.service)({
+    url: "/updateuserpassword.action",
+    method: 'GET',
+    params: {
+      passwordencrypt: passwordencrypt,
+      password: password,
+      user_name: user_name,
+      my_username: my_username } });
+
+
+}
+//接入设备->报警=>解除报警接口
+function WebeditFileimageServlet(username, cause) {
+  return (0, _request.service)({
+    url: "/WebeditFileimageServlet",
+    method: 'GET',
+    params: {
+      username: username,
+      cause: cause } });
+
+
+
+}
+function closeVoice(username, imei, style, time) {
+  return (0, _request.service)({
+    url: "/WebProject/closeVoice.action",
+    method: 'GET',
+    params: {
+      username: username, imei: imei, style: style, time: time } });
+
+
+}
+function setDepoly(username, deploy, imei) {
+  return (0, _request.service)({
+    url: "/WebProject/setDepoly.action",
+    method: 'GET',
+    params: {
+      username: username, deploy: deploy, imei: imei } });
+
+
+}
+
 /***/ }),
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */
+/* 79 */
 /*!*********************************!*\
   !*** D:/hb/anfang/utils/md5.js ***!
   \*********************************/
@@ -13398,7 +13487,7 @@ function ReadParameterApi(id, my_username) {
     root = self;
   }
   var COMMON_JS = !root.JS_MD5_NO_COMMON_JS && typeof module === 'object' && module.exports;
-  var AMD =  true && __webpack_require__(/*! !webpack amd options */ 104);
+  var AMD =  true && __webpack_require__(/*! !webpack amd options */ 80);
   var ARRAY_BUFFER = !root.JS_MD5_NO_ARRAY_BUFFER && typeof ArrayBuffer !== 'undefined';
   var HEX_CHARS = '0123456789abcdef'.split('');
   var EXTRA = [128, 32768, 8388608, -2147483648];
@@ -14061,7 +14150,7 @@ function ReadParameterApi(id, my_username) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/node-libs-browser/mock/process.js */ 50), __webpack_require__(/*! (webpack)/buildin/global.js */ 3)))
 
 /***/ }),
-/* 104 */
+/* 80 */
 /*!****************************************!*\
   !*** (webpack)/buildin/amd-options.js ***!
   \****************************************/
@@ -14074,6 +14163,30 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(this, {}))
 
 /***/ }),
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -14183,50 +14296,7 @@ module.exports = __webpack_amd_options__;
 /* 211 */,
 /* 212 */,
 /* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */
+/* 214 */
 /*!**************************************************!*\
   !*** D:/hb/anfang/uview-ui/libs/util/emitter.js ***!
   \**************************************************/
@@ -14285,7 +14355,7 @@ function _broadcast(componentName, eventName, params) {
     } } };exports.default = _default;
 
 /***/ }),
-/* 258 */
+/* 215 */
 /*!**********************************************************!*\
   !*** D:/hb/anfang/uview-ui/libs/util/async-validator.js ***!
   \**********************************************************/
@@ -14315,7 +14385,7 @@ function _broadcast(componentName, eventName, params) {
 var formatRegExp = /%[sdj%]/g;
 var warning = function warning() {}; // don't print warning message when in production env or node runtime
 
-if (typeof process !== 'undefined' && Object({"NODE_ENV":"development","VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}) && "development" !== 'production' && typeof window !==
+if (typeof process !== 'undefined' && Object({"VUE_APP_NAME":"anfang","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}) && "development" !== 'production' && typeof window !==
 'undefined' && typeof document !== 'undefined') {
   warning = function warning(type, errors) {
     if (typeof console !== 'undefined' && console.warn) {

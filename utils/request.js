@@ -1,6 +1,6 @@
 import axios from 'axios';
 const service = axios.create({
-  baseURL: 'http://edog-online.com/earlyWarn', // api的base_url
+  baseURL: 'https://psy119.cn/earlyWarn', // api的base_url
   timeout: 50000 // 请求超时时间
 });
 

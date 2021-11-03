@@ -25,7 +25,49 @@
 				<!-- <u-checkbox-group @change="checkboxGroupChange">
 					<u-checkbox @change="checkboxChange" v-model="item.checked" :name="item.name"> -->
 				<u-row gutter="16">
-					<u-col span="3" text-align="center"><image src="../../static/yangantanceqi.png"></image></u-col>
+					<u-col span="3" text-align="center">
+						<image
+							:src="
+								item.type == '2'
+									? '../../static/yangantanceqi.png'
+									: item.type == '3'
+									? '../../static/a-guihuatubiaoyuanwenjianFarlim_huaban1fuben11.png'
+									: item.type == '4'
+									? '../../static/shuiya.png'
+									: item.type == '5'
+									? '../../static/wulitu_zhuji.png'
+									: item.type == '6'
+									? '../../static/ranqi.png'
+									: item.type == '7'
+									? '../../static/fenchen.png'
+									: item.type == '9'
+									? '../../static/shipin.png'
+									: item.type == '10'
+									? '../../static/menci.png'
+									: item.type == '11'
+									? '../../static/ranqi.png'
+									: item.type == '12'
+									? '../../static/dianqihuozai.png'
+									: item.type == '15'
+									? '../../static/shengguangbaojingqi.png'
+									: item.type == '16'
+									? '../../static/shoudong.png'
+									: item.type == '18'
+									? '../../static/shuijinbaojing.png'
+									: item.type == '19'
+									? '../../static/shebeibaojing.png'
+									: item.type == '21'
+									? '../../static/miehuoqi.png'
+									: item.type == '22'
+									? '../../static/chongheza.png'
+									: item.type == '23'
+									? '../../static/duanluqi'
+									: ite.type == '0'
+									? '../../static/yunwangguan.png'
+									: '../../static/nfc_dev.png'
+							"
+						></image>
+					</u-col>
 					<u-col span="8">
 						<ul>
 							<li>设备ID:{{ item.productNumber }}</li>
@@ -51,7 +93,49 @@
 					<u-checkbox @change="checkboxChange" v-model="item.checked" v-for="(item, index) in deviceByPidList" :key="index" :name="item.devId">
 						<view class="box">
 							<u-row gutter="16">
-								<u-col span="3" text-align="center"><image src="../../static/yangantanceqi.png"></image></u-col>
+								<u-col span="3" text-align="center">
+									<image
+										:src="
+											item.type == '2'
+												? '../../static/yangantanceqi.png'
+												: item.type == '3'
+												? '../../static/a-guihuatubiaoyuanwenjianFarlim_huaban1fuben11.png'
+												: item.type == '4'
+												? '../../static/shuiya.png'
+												: item.type == '5'
+												? '../../static/wulitu_zhuji.png'
+												: item.type == '6'
+												? '../../static/ranqi.png'
+												: item.type == '7'
+												? '../../static/fenchen.png'
+												: item.type == '9'
+												? '../../static/shipin.png'
+												: item.type == '10'
+												? '../../static/menci.png'
+												: item.type == '11'
+												? '../../static/ranqi.png'
+												: item.type == '12'
+												? '../../static/dianqihuozai.png'
+												: item.type == '15'
+												? '../../static/shengguangbaojingqi.png'
+												: item.type == '16'
+												? '../../static/shoudong.png'
+												: item.type == '18'
+												? '../../static/shuijinbaojing.png'
+												: item.type == '19'
+												? '../../static/shebeibaojing.png'
+												: item.type == '21'
+												? '../../static/miehuoqi.png'
+												: item.type == '22'
+												? '../../static/chongheza.png'
+												: item.type == '23'
+												? '../../static/duanluqi'
+												: ite.type == '0'
+												? '../../static/yunwangguan.png'
+												: '../../static/nfc_dev.png'
+										"
+									></image>
+								</u-col>
 								<u-col span="8">
 									<ul>
 										<li>设备ID:{{ item.productNumber }}</li>
@@ -206,6 +290,7 @@ export default {
 		},
 		//项目详情
 		projectDetails(devId, productNumber) {
+			console.log(123123);
 			uni.navigateTo({
 				url: `/myPagesA/pages/devicesInfo?devId=${devId}&productNumber=${productNumber}`
 			});

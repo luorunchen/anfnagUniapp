@@ -1,5 +1,10 @@
 <template>
 	<view class="addProject">
+		<u-row gutter="16">
+			<u-col span="5"><u-button type="primary" @click="addPerpo('0')">新增防火员</u-button></u-col>
+			<u-col span="5"><u-button type="primary" @click="addPerpo('1')">新增责任人</u-button></u-col>
+		</u-row>
+
 		<u-form :model="form" ref="uForm" label-width="150">
 			<u-form-item label="项目名称" prop="name"><u-input v-model="form.name" placeholder="请输入项目名称" /></u-form-item>
 			<u-form-item label="项目地址" prop="address" right-icon="map-fill"><u-input @click="s" v-model="form.address" placeholder="点击输入框选择地址" /></u-form-item>
@@ -30,18 +35,31 @@
 			<u-form-item label="备注" prop="intro"><u-input v-model="form.intro" /></u-form-item>
 		</u-form>
 		<u-button @click="submit" type="primary">提交</u-button>
-		<u-modal v-model="show" :content="content" @confirm="addProjectTrue"></u-modal>
+		<u-modal v-model="show" :content="content" @confirm="addProjpxectTrue"></u-modal>
+
+		<u-popup v-model="popupShow" mode="center" border-radius="14" width="90%">
+			<view class="popup">
+				<u-form :model="form" ref="uForm" label-width="100">
+					<u-form-item label="用户名" prop="user"><u-input v-model="form.user" /></u-form-item>
+					<u-form-item label="手机号" prop="phone"><u-input v-model="form.phone" /></u-form-item>
+					<u-form-item label="备注" prop="remake"><u-input v-model="form.remake" /></u-form-item>
+				</u-form>
+				<u-button @click="addTrue">提交</u-button>
+			</view>
+		</u-popup>
+		<u-toast ref="uToast" />
 	</view>
 </template>
 
 <script>
 var QQMapWX = require('@/pages/index/qqmap-wx-jssdk.js');
 var qqmapsdk;
-import { regionList, getLegalFireMan, addProject } from '@/api/api.js';
+import { regionList, getLegalFireMan, addProject, addLegalFireMan } from '@/api/api.js';
 export default {
 	data() {
 		return {
 			show: false,
+			popupShow: false,
 			fireManShow: false,
 			streetListShow: false,
 			personLiableShow: false,
@@ -147,7 +165,8 @@ export default {
 			],
 			form: {
 				name: '',
-
+				user: '',
+				phone: '',
 				address: '',
 				//防火员
 				fireMan: '',
@@ -191,7 +210,7 @@ export default {
 						required: true,
 						message: '请选择防火员',
 						// 可以单个或者同时写两个触发验证方式
-					trigger: 'change'
+						trigger: 'change'
 					}
 				],
 				personLiable: [
@@ -204,7 +223,6 @@ export default {
 				],
 				street: [
 					{
-				
 						required: true,
 						message: '请选择所在街道',
 						// 可以单个或者同时写两个触发验证方式
@@ -226,6 +244,22 @@ export default {
 						// 可以单个或者同时写两个触发验证方式
 						trigger: ['change', 'blur']
 					}
+				],
+				phone: [
+					{
+						min: 11,
+						max: 11,
+						pattern: /^\d{11,11}$/,
+						message: '手机号不超过11位或小于',
+						trigger: 'change'
+					}
+				],
+				user: [
+					{
+						required: true,
+						message: '请输入姓名',
+						trigger: 'change'
+					}
 				]
 				// fireMan: [
 				// 	{
@@ -238,6 +272,29 @@ export default {
 		};
 	},
 	methods: {
+		addTrue() {
+			let long_lat;
+			let long_latbai;
+			let ftelephone;
+			addLegalFireMan(this.addPerpoState, this.form.user, uni.getStorageSync('userName'), this.form.phone, this.form.remake, long_lat, long_latbai, ftelephone).then(res => {
+				if (res.data.list[0].status == 'true') {
+					this.$refs.uToast.show({
+						title: '添加成功',
+						type: 'success'
+					});
+					this.popupShow = false;
+				} else {
+					this.$refs.uToast.show({
+						title: res.data.list[0].mess,
+						type: 'error'
+					});
+				}
+			});
+		},
+		addPerpo(state) {
+			this.popupShow = true;
+			this.addPerpoState = state;
+		},
 		addProjectTrue() {
 			if (this.content == '项目添加成功!') {
 				uni.navigateTo({
@@ -247,10 +304,10 @@ export default {
 		},
 		fireManSearch(state) {
 			let obj;
-			if (state == 'fireMan' &&this.form.fireMan!='') {
+			if (state == 'fireMan' && this.form.fireMan != '') {
 				this.fireManShow = true;
 				obj = this.form.fireMan;
-			} else if(state == 'person' &&this.form.personLiable!='') {
+			} else if (state == 'person' && this.form.personLiable != '') {
 				this.personLiableShow = true;
 				obj = this.form.personLiable;
 			}
@@ -430,5 +487,8 @@ export default {
 <style lang="scss" scoped>
 .addProject {
 	padding: 10px;
+	.popup {
+		padding: 10px;
+	}
 }
 </style>

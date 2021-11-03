@@ -50,7 +50,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx0bd2227b39f0972b",
+        "appid" : "wx4f530f06ff0997de",
         "setting" : {
             "urlCheck" : false,
             "postcss" : true,
@@ -59,7 +59,12 @@
         "usingComponents" : true,
         "optimization" : {
             "subPackages" : true
-        }
+        },
+				"permission": {
+				  "scope.userLocation": {
+				    "desc": "你的位置信息将用于小程序位置接口的效果展示" // 高速公路行驶持续后台定位
+				  }
+				}
     },
     "mp-alipay" : {
         "usingComponents" : true
@@ -72,5 +77,10 @@
     },
     "uniStatistics" : {
         "enable" : false
-    }
+    },
+		"permission": {
+		  "scope.userLocation": {
+		    "desc": "你的位置信息将用于小程序位置接口的效果展示" // 高速公路行驶持续后台定位
+		  }
+		}
 }

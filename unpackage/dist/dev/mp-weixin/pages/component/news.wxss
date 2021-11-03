@@ -26,6 +26,7 @@
 /* 文章场景相关 */
 .news.data-v-34637ade {
   background-color: #efefec;
+  text-align: center;
   padding-bottom: 30px;
 }
 .news .box .boxTime.data-v-34637ade {

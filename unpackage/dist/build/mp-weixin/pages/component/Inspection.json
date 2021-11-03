@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "巡检",
+  "navigationBarTitleText": "项目",
   "usingComponents": {
     "u-subsection": "/uview-ui/components/u-subsection/u-subsection",
     "u-row": "/uview-ui/components/u-row/u-row",

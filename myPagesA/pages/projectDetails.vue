@@ -14,7 +14,7 @@
 			</u-cell-group>
 		</view>
 		<view class="info">
-			<u-cell-group><u-cell-item icon="setting-fill" title="管理设备" :value="appArr.num" @click="devicesSet"></u-cell-item></u-cell-group>
+			<u-cell-group><u-cell-item icon="setting-fill" title="管理设备"  :value-style="{color:'red'}"  :value="appArr.num" @click="devicesSet"></u-cell-item></u-cell-group>
 		</view>
 		<view>
 			<u-cell-group>

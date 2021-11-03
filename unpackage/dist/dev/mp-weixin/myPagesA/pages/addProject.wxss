@@ -27,4 +27,7 @@
 .addProject.data-v-32e4f3cb {
   padding: 10px;
 }
+.addProject .popup.data-v-32e4f3cb {
+  padding: 10px;
+}
 

@@ -7,6 +7,8 @@
     "u-tr": "/uview-ui/components/u-tr/u-tr",
     "u-th": "/uview-ui/components/u-th/u-th",
     "u-td": "/uview-ui/components/u-td/u-td",
-    "u-upload": "/uview-ui/components/u-upload/u-upload"
+    "u-upload": "/uview-ui/components/u-upload/u-upload",
+    "u-button": "/uview-ui/components/u-button/u-button",
+    "u-toast": "/uview-ui/components/u-toast/u-toast"
   }
 }

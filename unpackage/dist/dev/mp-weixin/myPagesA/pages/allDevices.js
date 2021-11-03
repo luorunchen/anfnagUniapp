@@ -96,10 +96,10 @@ var components
 try {
   components = {
     uGrid: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-grid/u-grid */ "uview-ui/components/u-grid/u-grid").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-grid/u-grid.vue */ 301))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-grid/u-grid */ "uview-ui/components/u-grid/u-grid").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-grid/u-grid.vue */ 330))
     },
     uGridItem: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-grid-item/u-grid-item */ "uview-ui/components/u-grid-item/u-grid-item").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-grid-item/u-grid-item.vue */ 308))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-grid-item/u-grid-item */ "uview-ui/components/u-grid-item/u-grid-item").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-grid-item/u-grid-item.vue */ 337))
     }
   }
 } catch (e) {
@@ -185,23 +185,23 @@ var _default = { data: function data() {return { deciceType: [] };}, mounted: fu
         var _data = res.data.list[0].values.split(',');
         var data4 = res.data.list[0].isTraffic.split(',');
         var data3 = [
-        'http://psy119.cn/early/images/drawable-hdpi/wangguan.png',
-        'http://psy119.cn/early/images/drawable-hdpi/device_type.png',
-        'http://psy119.cn/early/images/drawable-hdpi/smoke.png',
-        'http://psy119.cn/early/images/drawable-hdpi/safe_electricity.png',
-        'http://psy119.cn/early/images/drawable-hdpi/water_pressure.png',
-        'http://psy119.cn/early/images/drawable-hdpi/fire_engine.png',
+        '../../static/yunwangguan.png',
+        '../../static/ranqi.png',
+        '../../static/yangantanceqi.png',
+        '../../static/a-guihuatubiaoyuanwenjianFarlim_huaban1fuben11.png',
+        '../../static/shuiya.png',
+        '../../static/wulitu_zhuji.png',
         'http://psy119.cn/early/images/drawable-hdpi/qigan_wifi.png',
-        'http://psy119.cn/early/images/drawable-hdpi/dustnew.png',
+        '../../static/fenchen.png',
         'http://psy119.cn/early/images/drawable-hdpi/yewei_wifi.png',
-        'http://psy119.cn/early/images/drawable-hdpi/video.png',
-        'http://psy119.cn/early/images/drawable-hdpi/fire_door.png',
+        '../../static/shipin.png',
+        '../../static/menci.png',
         'http://psy119.cn/early/images/drawable-hdpi/nfc_dev.png',
-        'http://psy119.cn/early/images/drawable-hdpi/ElePowPRO.png',
-        'http://psy119.cn/early/images/drawable-hdpi/shengguang.png',
-        'http://psy119.cn/early/images/drawable-hdpi/shoudong.png',
-        'http://psy119.cn/early/images/drawable-hdpi/shuiyin.png',
-        'http://psy119.cn/early/images/drawable-hdpi/jinji.png'];
+        '../../static/dianqihuozai.png',
+        '../../static/shengguangbaojingqi.png',
+        '../../static/shoudong.png',
+        '../../static/shuijinbaojing.png',
+        '../../static/shebeibaojing.png'];
 
 
         if (i < 17) {

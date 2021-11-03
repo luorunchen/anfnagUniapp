@@ -1,6 +1,6 @@
 
-page{
-    background-color: #efefef;
+page {
+	background-color: #efefef;
 }
 
 @charset "UTF-8";
@@ -94,9 +94,40 @@ page{
 }
 .details .btn.data-v-7d04a2d8 {
   margin-top: 20px;
+  margin-bottom: 100px;
   height: 100px;
 }
 .details .btn.data-v-7d04a2d8 .u-btn {
+  margin-top: 10px;
+}
+.details .btn .flex.data-v-7d04a2d8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  width: 100%;
+}
+.details .btn .flex.data-v-7d04a2d8 .u-btn {
+  width: calc(30vw);
+}
+.details .form.data-v-7d04a2d8 {
+  padding: 30px 35px 30px 10px;
+}
+.details .relieve.data-v-7d04a2d8 {
+  padding: 10px;
+}
+.details .close.data-v-7d04a2d8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.details .close.data-v-7d04a2d8 .u-btn {
+  width: calc(45vw);
   margin-top: 10px;
 }
 

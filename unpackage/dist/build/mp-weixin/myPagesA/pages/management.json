@@ -6,6 +6,7 @@
     "u-button": "/uview-ui/components/u-button/u-button",
     "u-search": "/uview-ui/components/u-search/u-search",
     "u-checkbox-group": "/uview-ui/components/u-checkbox-group/u-checkbox-group",
-    "u-checkbox": "/uview-ui/components/u-checkbox/u-checkbox"
+    "u-checkbox": "/uview-ui/components/u-checkbox/u-checkbox",
+    "u-modal": "/uview-ui/components/u-modal/u-modal"
   }
 }

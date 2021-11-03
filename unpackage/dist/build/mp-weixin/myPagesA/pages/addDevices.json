@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "添加主机",
+  "navigationBarTitleText": "添加设备",
   "usingComponents": {
     "u-form": "/uview-ui/components/u-form/u-form",
     "u-form-item": "/uview-ui/components/u-form-item/u-form-item",
@@ -7,6 +7,7 @@
     "u-select": "/uview-ui/components/u-select/u-select",
     "u-radio-group": "/uview-ui/components/u-radio-group/u-radio-group",
     "u-radio": "/uview-ui/components/u-radio/u-radio",
-    "u-button": "/uview-ui/components/u-button/u-button"
+    "u-button": "/uview-ui/components/u-button/u-button",
+    "u-modal": "/uview-ui/components/u-modal/u-modal"
   }
 }

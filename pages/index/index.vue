@@ -13,17 +13,17 @@
 					<view>所有设备</view>
 				</view>
 			</view>
-			<view class="dot">
-				<!-- <image src="../../static/8.gif" mode=""></image> -->
+			<!-- <view class="dot">
+			
 				<view class="textInfo">报警信息</view>
 				<text>13211</text>
-			</view>
+			</view> -->
 			<view class="boxWapper">
-				<view class="boxContainer">
+				<view class="boxContainer" @click="news">
 					<image src="../../static/iconkuozhan_xiaoxipre.png" mode="" style="margin-top: 70px;"></image>
 					<view>报警消息</view>
 				</view>
-				<view class="boxContainer">
+				<view class="boxContainer" @click="user">
 					<image src="../../static/yonghu.png" mode="" style="margin-top: 70px;"></image>
 					<view>用户信息</view>
 				</view>
@@ -87,6 +87,16 @@ export default {
 			uni.navigateTo({
 				url: '/myPagesA/pages/project'
 			});
+		},
+		news(){
+			uni.switchTab({
+				url:"/pages/component/news"
+			})
+		},
+		user(){
+			uni.switchTab({
+				url:"/pages/component/me"
+			})
 		},
 		goToAllDevices(){
 			console.log(123);

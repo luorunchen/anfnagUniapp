@@ -96,25 +96,25 @@ var components
 try {
   components = {
     uRow: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-row/u-row */ "uview-ui/components/u-row/u-row").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-row/u-row.vue */ 287))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-row/u-row */ "uview-ui/components/u-row/u-row").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-row/u-row.vue */ 281))
     },
     uCol: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-col/u-col */ "uview-ui/components/u-col/u-col").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-col/u-col.vue */ 294))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-col/u-col */ "uview-ui/components/u-col/u-col").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-col/u-col.vue */ 288))
     },
     uButton: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-button/u-button */ "uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-button/u-button.vue */ 201))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-button/u-button */ "uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-button/u-button.vue */ 225))
     },
     uSearch: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-search/u-search */ "uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-search/u-search.vue */ 252))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-search/u-search */ "uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-search/u-search.vue */ 246))
     },
     uCheckboxGroup: function() {
-      return Promise.all(/*! import() | uview-ui/components/u-checkbox-group/u-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-checkbox-group/u-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-checkbox-group/u-checkbox-group.vue */ 315))
+      return Promise.all(/*! import() | uview-ui/components/u-checkbox-group/u-checkbox-group */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-checkbox-group/u-checkbox-group")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-checkbox-group/u-checkbox-group.vue */ 344))
     },
     uCheckbox: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-checkbox/u-checkbox */ "uview-ui/components/u-checkbox/u-checkbox").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-checkbox/u-checkbox.vue */ 322))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-checkbox/u-checkbox */ "uview-ui/components/u-checkbox/u-checkbox").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-checkbox/u-checkbox.vue */ 351))
     },
     uModal: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-modal/u-modal */ "uview-ui/components/u-modal/u-modal").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-modal/u-modal.vue */ 208))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-modal/u-modal */ "uview-ui/components/u-modal/u-modal").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-modal/u-modal.vue */ 316))
     }
   }
 } catch (e) {
@@ -172,6 +172,90 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -332,6 +416,90 @@ var _api = __webpack_require__(/*! @/api/api.js */ 78); //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = { data: function data() {return { list: [{ name: '自建项目' }, { name: '代管项目' }], content: '', show: false, keyword: '', current: 1, pH: 0, //窗口高度
       navHeight: 0, //元素的所需高度
       ProjectStatus: false, status: '', deviceByPidList: [], deviceByPidListCopy: [] };}, onLoad: function onLoad(data) {this.getDeviceByPidFun(uni.getStorageSync('userName'), data.pid);this.pid = data.pid;}, mounted: function mounted() {var that = this;uni.getSystemInfo({ //调用uni-app接口获取屏幕高度
@@ -345,44 +513,12 @@ var _default = { data: function data() {return { list: [{ name: '自建项目' }
     deleteProjectOn: function deleteProjectOn() {var _this2 = this; //确定删除
       if (this.status == 'delete') {this.show = true;(0, _api.deleDevice)(this.checkBoxValue, uni.getStorageSync('userName'), uni.getStorageSync('userName')).then(function (res) {_this2.content = res.data.list[0].mess;if (res.data.list[0].status == 'true') {_this2.ProjectStatus = false;}});}}, //删除取消
     deleteProjectOff: function deleteProjectOff() {this.ProjectStatus = false;}, //点击删除,//点击分享
-    Project: function Project(status) {this.status = status;
-      this.ProjectStatus = true;
-    },
-    // 选中某个复选框时，由checkbox时触发
-    checkboxChange: function checkboxChange(e) {
-      console.log(e);
-      this.$forceUpdate();
-    },
-    // 选中任一checkbox时，由checkbox-group触发
-    checkboxGroupChange: function checkboxGroupChange(e) {
-      console.log(e);
-      this.checkBoxValue = e.toString();
-      this.$forceUpdate();
-    },
-
-    searchChange: function searchChange(e) {var _this3 = this;
-      console.log(e, 'woshieeeee');
-      var c = {};
-      // console.log(JSON.stringify(this.deviceByPidList),1231)
+    Project: function Project(status) {this.status = status;this.ProjectStatus = true;}, // 选中某个复选框时，由checkbox时触发
+    checkboxChange: function checkboxChange(e) {console.log(e);this.$forceUpdate();}, // 选中任一checkbox时，由checkbox-group触发
+    checkboxGroupChange: function checkboxGroupChange(e) {console.log(e);this.checkBoxValue = e.toString();this.$forceUpdate();}, searchChange: function searchChange(e) {var _this3 = this;console.log(e, 'woshieeeee');var c = {}; // console.log(JSON.stringify(this.deviceByPidList),1231)
       // console.log(JSON.stringify(this.deviceByPidList).indexOf(e)!= -1,121111131)
-      if (JSON.stringify(this.deviceByPidList).indexOf(e) != -1) {
-        this.deviceByPidList.map(function (value, indiex) {
-          console.log(value.productNumber, 'sa');
-          if (value.productNumber.indexOf(e) != -1 || value.installLocation.indexOf(e) != -1) {
-            _this3.deviceByPidList = [value];
-          }
-        });
-      }
-      if (e == '') {
-        this.deviceByPidList = this.deviceByPidListCopy;
-      }
-    },
-    //项目详情
-    projectDetails: function projectDetails(devId, productNumber) {
-      uni.navigateTo({
-        url: "/myPagesA/pages/devicesInfo?devId=".concat(devId, "&productNumber=").concat(productNumber) });
-
-    } } };exports.default = _default;
+      if (JSON.stringify(this.deviceByPidList).indexOf(e) != -1) {this.deviceByPidList.map(function (value, indiex) {console.log(value.productNumber, 'sa');if (value.productNumber.indexOf(e) != -1 || value.installLocation.indexOf(e) != -1) {_this3.deviceByPidList = [value];}});}if (e == '') {this.deviceByPidList = this.deviceByPidListCopy;}}, //项目详情
+    projectDetails: function projectDetails(devId, productNumber) {console.log(123123);uni.navigateTo({ url: "/myPagesA/pages/devicesInfo?devId=".concat(devId, "&productNumber=").concat(productNumber) });} } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

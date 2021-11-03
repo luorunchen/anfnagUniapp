@@ -127,7 +127,15 @@ content:"",
 				{
 					label: '工业液位',
 					value: '43'
-				}
+				},
+				 {
+				          value: "44",
+				          label: "智慧用电安全卫士",
+				        },
+				        {
+				          value: "47",
+				          label: "智慧用电断路器",
+				        },
 			],
 			rules: {
 				number: [

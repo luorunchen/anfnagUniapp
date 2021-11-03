@@ -1,3 +1,8 @@
+
+page {
+	background-color: #efefec;
+}
+
 @charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
@@ -27,15 +32,43 @@
 .devicesInfo.data-v-65af39a8 {
   height: calc(100vh);
   padding: 10px;
-  background-color: #efefec;
+}
+.btn.data-v-65af39a8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.btn.data-v-65af39a8 .u-btn {
+  width: calc(45vw);
+  margin-top: 10px;
 }
 .info.data-v-65af39a8 {
   margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .u-th.data-v-65af39a8 {
-  width: 33%;
+  width: 33.33%;
 }
 .u-td.data-v-65af39a8 {
-  width: 33%;
+  width: 33.33%;
+}
+.electricQuantity.data-v-65af39a8 {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.electricQuantity image.data-v-65af39a8 {
+  width: 120px;
+  height: 120px;
 }
 

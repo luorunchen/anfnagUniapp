@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/component/news",
-    "pages/index/index",
-    "pages/component/me",
     "pages/login/index",
+    "pages/index/index",
     "pages/component/devices",
+    "pages/component/news",
+    "pages/component/me",
     "pages/component/Inspection"
   ],
   "subPackages": [
@@ -66,5 +66,11 @@
       }
     ]
   },
-  "usingComponents": {}
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

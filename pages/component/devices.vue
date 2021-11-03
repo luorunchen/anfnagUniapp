@@ -5,10 +5,52 @@
 			<view class="wrap">
 				<u-waterfall v-model="appList" ref="uWaterfall">
 					<template v-slot:left="{ leftList }">
-						<view class="demo-warter" v-for="(item, index) in leftList" :key="index" @click="box(item.devid,item.productNumber)">
+						<view class="demo-warter" v-for="(item, index) in leftList" :key="index" @click="box(item.devid, item.productNumber)">
 							<!-- 警告：微信小程序中需要hx2.8.11版本才支持在template中结合其他组件，比如下方的lazy-load组件 -->
 							<view class="img">
-								<image src="../../static/yangan.png" mode="" style="width: 50px;height: 50px"></image>
+								<image
+									:src="
+										item.DSid == '2'
+											? '../../static/yangantanceqi.png'
+											: item.DSid == '3'
+											? '../../static/a-guihuatubiaoyuanwenjianFarlim_huaban1fuben11.png'
+											: item.DSid == '4'
+											? '../../static/shuiya.png'
+											: item.DSid == '5'
+											? '../../static/wulitu_zhuji.png'
+											: item.DSid == '6'
+											? '../../static/ranqi.png'
+											: item.DSid == '7'
+											? '../../static/fenchen.png'
+											: item.DSid == '9'
+											? '../../static/shipin.png'
+											: item.DSid == '10'
+											? '../../static/menci.png'
+											: item.DSid == '11'
+											? '../../static/ranqi.png'
+											: item.DSid == '12'
+											? '../../static/dianqihuozai.png'
+											: item.DSid == '15'
+											? '../../static/shengguangbaojingqi.png'
+											: item.DSid == '16'
+											? '../../static/shoudong.png'
+											: item.DSid == '18'
+											? '../../static/shuijinbaojing.png'
+											: item.DSid == '19'
+											? '../../static/shebeibaojing.png'
+											: item.DSid == '21'
+											? '../../static/miehuoqi.png'
+											: item.DSid=='22'
+											?'../../static/chongheza.png' 
+											:item.DSid=='23'
+											?'../../static/duanluqi'
+											:ite.DSid=='0'
+											?'../../static/yunwangguan.png'
+											:'../../static/nfc_dev.png'
+									"
+									mode=""
+									style="width: 50px;height: 50px"
+								></image>
 								<!-- <u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load> -->
 								<view class="number">{{ item.productNumber }}</view>
 								<view>设备:{{ item.dSName }}</view>
@@ -25,9 +67,50 @@
 						</view>
 					</template>
 					<template v-slot:right="{ rightList }">
-						<view class="demo-warter" v-for="(item, index) in rightList" :key="index" @click="box(item.devid,item.productNumber)">
+						<view class="demo-warter" v-for="(item, index) in rightList" :key="index" @click="box(item.devid, item.productNumber)">
 							<view class="img">
-								<image src="../../static/yangan.png" mode="" style="width: 50px;height: 50px"></image>
+								<image
+									:src="
+										item.DSid == '2'
+											? '../../static/yangantanceqi.png'
+											: item.DSid == '3'
+											? '../../static/a-guihuatubiaoyuanwenjianFarlim_huaban1fuben11.png'
+											: item.DSid == '4'
+											? '../../static/shuiya.png'
+											: item.DSid == '5'
+											? '../../static/wulitu_zhuji.png'
+											: item.DSid == '6'
+											? '../../static/ranqi.png'
+											: item.DSid == '7'
+											? '../../static/fenchen.png'
+											: item.DSid == '9'
+											? '../../static/shipin.png'
+											: item.DSid == '10'
+											? '../../static/menci.png'
+											: item.DSid == '11'
+											? '../../static/ranqi.png'
+											: item.DSid == '12'
+											? '../../static/dianqihuozai.png'
+											: item.DSid == '15'
+											? '../../static/shengguangbaojingqi.png'
+											: item.DSid == '16'
+											? '../../static/shoudong.png'
+											: item.DSid == '18'
+											? '../../static/shuijinbaojing.png'
+											: item.DSid == '19'
+											? '../../static/shebeibaojing.png'
+											: item.DSid == '21'
+											? '../../static/miehuoqi.png'
+											: item.DSid=='44'
+											?'../../static/chongheza.png' 
+											:item.DSid=='47'
+											?'../../static/duanluqi':ite.DSid=='0'?
+											'../../static/yunwangguan.png':
+											'../../static/nfc_dev.png'
+									"
+									mode=""
+									style="width: 50px;height: 50px"
+								></image>
 
 								<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index" v-show="pH <= 0"></u-lazy-load>
 								<view class="number">{{ item.productNumber }}</view>
@@ -59,19 +142,17 @@ export default {
 			navHeight: 0, //元素的所需高度
 			loadStatus: 'loadmore',
 			flowList: [],
-			appList: [
-			
-			],
+			appList: [],
 			pages: 20,
 			obj: ''
 		};
 	},
 	methods: {
-		box(devid,productNumber){
-			console.log(123123,devid)
+		box(devid, productNumber) {
+			console.log(123123, devid);
 			uni.navigateTo({
-				url:`/myPagesA/pages/devicesInfo?devId=${devid}&productNumber=${productNumber}`
-			})
+				url: `/myPagesA/pages/devicesInfo?devId=${devid}&productNumber=${productNumber}`
+			});
 		},
 		searchChange(e) {
 			console.log(2222);
@@ -87,8 +168,8 @@ export default {
 			// 	item.id = this.$u.guid();
 			// 	this.flowList.push(item);
 			// }
-			this.flowList=this.appList
-			console.log(this.flowList,654654);
+			this.flowList = this.appList;
+			console.log(this.flowList, 654654);
 		},
 		AppDeviceListFun() {
 			AppDeviceList(uni.getStorageSync('userName'), uni.getStorageSync('userName'), 1, this.pages, this.obj).then(res => {
